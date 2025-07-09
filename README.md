@@ -17,7 +17,7 @@ Dashboard web moderno y responsivo para visualizar y analizar gastos personales 
 
 1. **Clona el repositorio:**
    ```sh
-   git clone https://github.com/tu-usuario/finanzas_app.git
+   git clone https://github.com/tu-usuario/econogrow.git
    cd finanzas_app
    ```
 2. **Estructura:**
@@ -47,7 +47,7 @@ finanzas_app/
 
 ## Webhook esperado
 - El dashboard espera un endpoint tipo:
-  `https://n8n.iaexperience.com.ar/webhook/get-gastos?sheetName=mes_año`
+  `https://{tu-endpoint}/get-gastos?sheetName=mes_año`
 - El JSON debe incluir los campos:
   - `gasto_mensual`, `presupuesto_mensual`, `presupuesto_semanal` (en el primer elemento)
   - `fecha`, `categoria_principal`, `categoria_kakebo`, `descripcion`, `notas`, `monto`, `tipo`
