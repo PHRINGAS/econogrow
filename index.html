@@ -396,7 +396,8 @@
     }
 
     function getCurrentSheetName() {
-      const now = new Date('2025-07-09T15:09:12-03:00'); // Fecha de referencia para la demo
+      // Se comenta la fecha fija de la demo para usar la fecha real.
+      const now = new Date(); // Usa la fecha y hora actual del sistema
       const mes = getMonthNameSpanish(now.getMonth());
       const anio = now.getFullYear();
       return `${mes}_${anio}`;
@@ -745,8 +746,8 @@
         }));
 
         // --- Últimos 7 días ---
-        const now = new Date('2025-07-09T15:09:12-03:00');
-        // Calcular el rango: desde hoy hasta 6 días atrás, pero no antes del primer día del mes
+        const now = new Date(); // Usa la fecha y hora actual del sistema
+        // Calcular el rango: desde hoy hasta 6 días atrás
         const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
         const minDate = new Date(Math.max(startOfMonth.getTime(), now.getTime() - 6 * 24 * 60 * 60 * 1000));
         const last7Days = data.tableData.filter(row => {
