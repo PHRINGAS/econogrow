@@ -327,63 +327,65 @@
 
 <body>
 
+  <main class="main">
+    <img src="logo.png" alt="EconoGrow logo" class="main-logo">
+    <div class="container">
 
+      <div class="filters">
+        <button class="filter-btn active" data-filter="currentMonth">
+          📊 Este Mes
+        </button>
+        <button class="filter-btn" data-filter="kakeboAnalysis">
+          🎯 Necesidades vs Deseos
+        </button>
+        <button class="filter-btn" data-filter="weeklyControl">
+          📅 Últimos 7 Días
+        </button>
+      </div>
 
-  <div class="filters">
-    <button class="filter-btn active" data-filter="currentMonth">
-      📊 Este Mes
-    </button>
-    <button class="filter-btn" data-filter="kakeboAnalysis">
-      🎯 Necesidades vs Deseos
-    </button>
-    <button class="filter-btn" data-filter="weeklyControl">
-      📅 Últimos 7 Días
-    </button>
-  </div>
+      <div class="chart-section">
+        <h2 class="chart-title" id="chartTitle">Gastos del Mes Actual</h2>
+        <div class="chart-container">
+          <canvas id="chart" width="360" height="360"></canvas>
+          <div id="chartLegend"></div>
+        </div>
+      </div>
 
-  <div class="chart-section">
-    <h2 class="chart-title" id="chartTitle">Gastos del Mes Actual</h2>
-    <div class="chart-container">
-      <canvas id="chart" width="360" height="360"></canvas>
-      <div id="chartLegend"></div>
-    </div>
-  </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="stat1">$1,245</div>
+          <div class="stat-label" id="stat1Label">Total Gastado</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat2">5</div>
+          <div class="stat-label" id="stat2Label">Categorías</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat3">$755</div>
+          <div class="stat-label" id="stat3Label">Presupuesto Restante</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat4">62%</div>
+          <div class="stat-label" id="stat4Label">Progreso</div>
+        </div>
+      </div>
 
-  <div class="stats-grid">
-    <div class="stat-card">
-      <div class="stat-value" id="stat1">$1,245</div>
-      <div class="stat-label" id="stat1Label">Total Gastado</div>
+      <div class="data-table">
+        <h2 class="table-title" id="tableTitle">Detalle de Gastos</h2>
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th class="col-categoria">Categoría</th>
+              <th>Descripción</th>
+              <th>Monto</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="stat-card">
-      <div class="stat-value" id="stat2">5</div>
-      <div class="stat-label" id="stat2Label">Categorías</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value" id="stat3">$755</div>
-      <div class="stat-label" id="stat3Label">Presupuesto Restante</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value" id="stat4">62%</div>
-      <div class="stat-label" id="stat4Label">Progreso</div>
-    </div>
-  </div>
-
-  <div class="data-table">
-    <h2 class="table-title" id="tableTitle">Detalle de Gastos</h2>
-    <table id="dataTable">
-      <thead>
-        <tr>
-          <th>Fecha</th>
-          <th class="col-categoria">Categoría</th>
-          <th>Descripción</th>
-          <th>Monto</th>
-        </tr>
-      </thead>
-      <tbody id="tableBody">
-      </tbody>
-    </table>
-  </div>
-  </div>
   </main>
 
   <script>
